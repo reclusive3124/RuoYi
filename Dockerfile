@@ -6,7 +6,7 @@ MAINTAINER janche
 # 其效果是在主机 /var/lib/docker 目录下创建了一个临时文件，并链接到容器的/tmp
 VOLUME /tmp
 
-ADD ./ruoyi-admin/target/ruoyi-admin.jar ruoyi-admin.jar
+ADD ./ruoyi-admin/target/ruoyi-admin.jar /tmp
 ENTRYPOINT ["java","-jar","/ruoyi-admin.jar"]
 # 指定容器需要映射到主机的端口
 EXPOSE 8080
